@@ -68,7 +68,7 @@ df9ae480d4e8        ubuntu              "/bin/bash"         20 minutes ago      
 
 ```
 
-### 删除容器
+### 删除容器和镜像
 ```
 # docker rm 1fb7ec79db96
 1fb7ec79db96
@@ -79,9 +79,22 @@ Deleted: sha256:e4c183c114d3625b317144cf2dd2ffd78d97f91b7fa03ab811462df79df97747
 Deleted: sha256:b5fc8a3bea45a2ac1b66830b858a886584f5b9aad557c89a15cc7e04e81962a4
 ```
 
-### 再删除镜像
 ```
 # docker images
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 ubuntu              latest              4e2eef94cd6b        13 hours ago        73.9MB
+```
+
+## 删除容器
+```
+➜  Desktop docker ps -a
+CONTAINER ID        IMAGE               COMMAND             CREATED              STATUS                            PORTS               NAMES
+25ccbb0073dc        ubuntu              "/bin/bash"         25 hours ago         Exited (0) 25 hours ago                               distracted_napier
+a2bfbf4195fe        ubuntu              "/bash/bin"         25 hours ago         Created                                               happy_curie
+3e51c690c954        ubuntu:latest       "/bin/bash"         27 hours ago         Exited (129) 25 hours ago                             wonderful_hopper
+
+➜  Desktop docker rm 25ccbb0073dc a2bfbf4195fe 3e51c690c954
+25ccbb0073dc
+a2bfbf4195fe
+3e51c690c954
 ```
