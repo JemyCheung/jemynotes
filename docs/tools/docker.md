@@ -15,13 +15,20 @@ $ docker images
 ### 查看容器
 在第一次安装镜像之后，是看不到容器的。只有第一次进入并运行容器之后，退出来，再用此命令，可以看到刚刚允许的容器
 ```
-docker ps
+docker ps -a
 ```
+
 ### 进入并运行容器
 ```
 docker run -it ubuntu /bin/bash
 ```
-
+### 注意事项
+一般到这步之后，就安装好docker镜像并进入容器了。但是由于新安装，所以ubuntu上面可能什么都没有。尝试过后
+```
+wget,
+git,
+```
+都没有，但是`apt-get`是有的。先`apt-get update`，更新命令，在`apt-get install git`安装一下git工具
 
 
 ## 镜像里面的内容被强制清空
