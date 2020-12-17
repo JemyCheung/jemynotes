@@ -1,6 +1,29 @@
 # docker
 Introduction
 
+## 安装镜像和使用
+### 安装ubuntu
+```
+docker pull ubuntu:latest
+```
+
+### 查看镜像
+```
+$ docker images
+```
+
+### 查看容器
+在第一次安装镜像之后，是看不到容器的。只有第一次进入并运行容器之后，退出来，再用此命令，可以看到刚刚允许的容器
+```
+docker ps
+```
+### 进入并运行容器
+```
+docker run -it ubuntu /bin/bash
+```
+
+
+
 ## 镜像里面的内容被强制清空
 
 ### 案例，创建的zw文件夹在exit镜像之后，再次进入没有了
