@@ -1,3 +1,0 @@
-# Summary
-
-* [Docker](docker.md)
